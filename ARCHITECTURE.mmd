@@ -1,0 +1,55 @@
+graph TB
+    subgraph "Frontend Layer"
+        A[Next.js App Router]
+        B[React Components]
+        C[ShadCN UI]
+        D[Tailwind CSS]
+    end
+    
+    subgraph "Backend Layer"
+        E[Server Actions]
+        F[API Routes]
+        G[Middleware]
+    end
+    
+    subgraph "Database Layer"
+        H[(Supabase PostgreSQL)]
+        I[RLS Policies]
+        J[Auth System]
+    end
+    
+    subgraph "External APIs"
+        K[Netlify DNS API]
+        L[ForwardEmail API]
+        M[Zoho IMAP]
+    end
+    
+    subgraph "Background Workers"
+        N[IMAP Sync Worker]
+        O[DNS Health Check]
+    end
+    
+    A --> B
+    B --> C
+    B --> D
+    A --> E
+    A --> F
+    G --> A
+    
+    E --> H
+    F --> H
+    E --> I
+    J --> H
+    
+    E --> K
+    E --> L
+    N --> M
+    N --> H
+    O --> K
+    O --> H
+    
+    style A fill:#3b82f6
+    style H fill:#10b981
+    style K fill:#f59e0b
+    style L fill:#f59e0b
+    style M fill:#f59e0b
