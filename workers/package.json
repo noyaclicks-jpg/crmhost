@@ -1,0 +1,20 @@
+{
+  "name": "hosting-crm-workers",
+  "version": "1.0.0",
+  "description": "Background workers for Hosting CRM",
+  "scripts": {
+    "imap-sync": "tsx imap-sync.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "imap": "^0.8.19",
+    "mailparser": "^3.6.5"
+  },
+  "devDependencies": {
+    "@types/imap": "^0.8.40",
+    "@types/mailparser": "^3.4.4",
+    "@types/node": "^20.10.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
